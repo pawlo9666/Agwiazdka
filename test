@@ -1,0 +1,39 @@
+def czyniejestwliscie(punkt , lista): #do funkcji dodaj rozwazane
+    for x in range(len(lista)):
+        if lista[x].x == punkt.x and lista[x].y == punkt.y:
+            if lista[x].koszt > punkt.koszt:
+                lista[x].koszt = punkt.koszt
+                lista[x].poprzedni = punkt.poprzedni
+            return False
+    return True
+
+def najmniejszaheurystykaindex(lista):
+    najmniejszy = lista[0]
+    index = 0
+    for x in range(len(lista)):
+
+            if najmniejszy.heurystyka == lista[x].heurystyka:
+                if najmniejszy.koszt > lista[x].koszt:
+                    najmniejszy = lista[x]
+                    index = x
+            elif najmniejszy.heurystyka > lista[x].heurystyka:
+                    najmniejszy=lista[x]
+                    index = x
+    return index
+
+def najmniejszaheurystykaindex(lista):
+    najmniejszy = lista[0]
+    index = 0
+    for x in range(len(lista)):
+
+            if najmniejszy.calk > lista[x].calk:
+                    najmniejszy = lista[x]
+                    index = x
+
+    return index
+
+def czyniejestwliscie(punkt , lista): #do funkcji dodaj rozwazane
+    for x in range(len(lista)):
+        if lista[x].x == punkt.x and lista[x].y == punkt.y:
+            return False
+    return True
